@@ -45,10 +45,7 @@
             color: black;
         }
 
-        .img {
-            width: 100px;
-            height: 100px;
-        }
+
 
         .head-div {
             background-color: #fef8f2;
@@ -93,12 +90,7 @@
             }
         }
 
-        .try-text {
-            color: #e0a3ba;
-            text-align: start;
-            margin: 3px;
-            letter-spacing: 3px;
-        }
+
 
         .input-container {
             position: relative;
@@ -115,7 +107,7 @@
         .heart-icon {
             position: absolute;
             right: 10px;
-            top: 57%;
+            top: 67%;
             transform: translateY(-50%);
             color: #fa95f9;
             animation: heartbeat 1.5s infinite;
@@ -151,7 +143,7 @@
         .font-name {
             font-weight: bold;
             margin-bottom: 10px;
-            color: #555;
+            color: #606161;
             border-bottom: 1px solid #eee;
             padding-bottom: 5px;
         }
@@ -163,10 +155,18 @@
         }
 
         .try-text {
-            color: #fa95f9;
-            letter-spacing: 2px;
+            color: #e0a3ba;
+            letter-spacing: 3px;
             margin-bottom: 5px;
-            font-size: 14px;
+            font-size: 15px;
+            text-align: start;
+        }
+        .img {
+           text-align: center !important;
+            width: 200px;
+            height: 100px;
+            margin: auto;
+            display: block;
         }
     </style>
 </head>
@@ -193,29 +193,35 @@
         <div class="font-grid" id="fontContainer">
             <!-- Font cards will be generated here -->
         </div>
+
+        <div>
+            <img class="img" src="https://i.postimg.cc/MGm76gP5/g-sticker-01.png"  />
+        </div>
     </div>
 
     <script>
         // All your Graphique fonts
         const fonts = [
-            {name: "Lilliana GRAPHIQUE", class: "'Lilliana', cursive"},
-            {name: "Marker Felt Graphique", class: "'Marker Felt', fantasy"},
-            {name: "Barbie Graphique", class: "'Chewy', cursive", color: "#e0218a"},
-            {name: "BubbleGum GraphIQUE", class: "'Bubblegum Sans', cursive"},
-            {name: "Katerlin Graphique", class: "'Katerlin', sans-serif"},
-            {name: "Baycat Graphique", class: "'Baycat', sans-serif"},
-            {name: "Black North Demo GraphIQUE", class: "'Black North', sans-serif"},
-            {name: "Kefa Regular Graphique", class: "'Kefa', sans-serif"},
-            {name: "Super Bakery Graphique", class: "'Super Bakery', cursive"},
-            {name: "Source Seif Variable Graphique", class: "'Source Serif', serif"},
-            {name: "Myrind Pro Graphique", class: "'Myriad Pro', sans-serif"},
-            {name: "The Postgates Regular Graphique", class: "'Postgates', serif"},
-            {name: "CHICKEN Pie Height Graphique", class: "'Chicken Pie', cursive"},
-            {name: "Arial Rounded MT Bold Graphique", class: "'Arial Rounded MT Bold', sans-serif"},
-            {name: "Coffee Healing Graphique", class: "'Coffee Healing', cursive"},
-            {name: "Waltograph Graphique", class: "'Waltograph', fantasy"},
-            {name: "Glacial Indifference Graphique", class: "'Glacial Indifference', sans-serif"},
-            {name: "SnowHut Graphique", class: "'SnowHut', cursive"}
+            {name: "Font 1", class: "'Lilliana', cursive"},
+            {name: "Font 2", class: "'Marker Felt'"},
+            {name: "Font 3", class: "'Chewy', cursive"},
+            {name: "Font 4", class: "'Bubblegum Sans', cursive"},
+            {name: "Font 5", class: "'Katerlin', sans-serif"},
+            {name: "Font 6", class: "'Baycat', sans-serif"},
+            {name: "Font 7", class: "'Black North', sans-serif"},
+            {name: "Font 8", class: "'Kefa', sans-serif"},
+            {name: "Font 9", class: "'Super Bakery', cursive"},
+            {name: "Font 10", class: "'Source Serif', serif"},
+            {name: "Font 11", class: "'Myriad Pro', sans-serif"},
+            {name: "Font 12", class: "'Postgates', serif"},
+            {name: "Font 13", class: "'Chicken Pie', cursive"},
+            {name: "Font 14 ", class: "'Arial Rounded MT Bold', sans-serif"},
+            {name: "Font 15", class: "'Coffee Healing', cursive"},
+            {name: "Font 16", class: "'Waltograph'"},
+            {name: "Font 17", class: "'Glacial Indifference', sans-serif"},
+            {name: "Font 18", class: "'SnowHut', cursive"},
+             {name: "Font 19", class: "'SnowHut', cursive"},
+            {name: "Font 20", class: "'SnowHut', cursive"}
         ];
 
         const input = document.getElementById('textInput');
