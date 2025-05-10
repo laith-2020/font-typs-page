@@ -29,7 +29,9 @@
   <link href="https://fonts.cdnfonts.com/css/snowhut" rel="stylesheet">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
-
+  <!-- Arabic Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Harmattan&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
@@ -41,7 +43,7 @@
       max-width: 800px;
       margin: 0 auto;
       padding: 20px;
-      font-family: "Myriad Pro", Myriad, sans-serif;
+      /* font-family: "Myriad Pro", Myriad, sans-serif; */
     }
     .logo {
       max-width: 200px;
@@ -109,6 +111,7 @@
     }
     .body-div {
       padding-top: 60px;
+      padding-left: 150px;
     }
     .marker-filt {
       font-family: "Marker Felt", fantasy;
@@ -119,27 +122,21 @@
     .BubbleGum {
       font-family: 'BubbleGum', cursive;
     }
-    .font-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 20px;
-    }
+
     .font-card {
-      background: white;
-      border-radius: 10px;
-      padding: 15px;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+   padding-bottom: 20px;
     }
     .font-name {
-      font-weight: bold;
+      /* font-weight: bold; */
       margin-bottom: 10px;
       color: #606161;
-      border-bottom: 1px solid #eee;
+      /* border-bottom: 1px solid #eee; */
       padding-bottom: 5px;
     }
     .font-preview {
+       border-bottom: 1px solid #eee;
       min-height: 60px;
-      font-size: 18px;
+      font-size: 30px;
       line-height: 1.4;
     }
     .try-text {
@@ -148,11 +145,12 @@
       margin-bottom: 5px;
       font-size: 15px;
       text-align: start;
+      font-family: 'Myriad Pro ';
     }
     .img {
       text-align: center !important;
-      width: 200px;
-      height: 100px;
+      /* width: 200px; */
+      /* height: 100px; */
       margin: auto;
       display: block;
     }
@@ -192,6 +190,54 @@
          url('fonts/font15.otf') format('truetype');
     }
 
+
+    /* Arabic Font Faces */
+
+    @font-face {
+      font-family: 'DecoType Naskh';
+      src: url('fonts/DecoTypeNaskhregular.woff2') format('woff2'),
+          url('fonts/DecoTypeNaskhregular.woff') format('woff'),
+          url('fonts/DecoTypeNaskhregular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap; /* Optional: improves performance */
+    }
+    @font-face {
+      font-family: 'FF Malmoom Regular';
+      src: url('fonts/FFMalmoomRegular.ttf') format('truetype');
+    }
+    @font-face {
+      font-family: 'DG Mataryah';
+      src: url('fonts/DGMataryah.ttf') format('truetype');
+    }
+    @font-face {
+      font-family: 'FF Mshabbak Regular';
+      src: url('fonts/FFMshabbakRegular.ttf') format('truetype');
+    }
+    @font-face {
+      font-family: 'VIP Sbgh';
+      src: url('fonts/VIPSbgh.ttf') format('truetype');
+    }
+    @font-face {
+      font-family: 'Air Strip Arabic';
+      src: url('fonts/AirStripArabic.ttf') format('truetype');
+    }
+    @font-face {
+      font-family: 'Watad Regular';
+      src: url('fonts/WatadRegular.otf') format('truetype');
+    }
+    @font-face {
+      font-family: 'Hacen Tunisia';
+      src: url('fonts/HacenTunisia.ttf') format('truetype');
+    }
+    @font-face {
+      font-family: 'Harmattan';
+      src: url('fonts/Harmattan.ttf') format('truetype');
+    }
+    @font-face {
+      font-family: 'Diodrum Arabic Bold';
+      src: url('fonts/DiodrumArabicBold.ttf') format('truetype');
+    }
     
   </style>
 </head>
@@ -203,7 +249,7 @@
     </div>
     <div>
       <div class="input-container">
-        <p class="try-text">Try out Graphique font</p>
+        <p class="try-text">Try out font</p>
         <input type="text" id="textInput" placeholder="enter your text here and see how they will look before purchasing">
         <i class="fas fa-heart heart-icon"></i>
       </div>
@@ -214,24 +260,25 @@
       <!-- Font cards will be generated here -->
     </div>
     <div>
-      <img class="img" src="https://i.postimg.cc/MGm76gP5/g-sticker-01.png" />
+      <img    style="width: 38rem;" class="img" src="https://i.postimg.cc/MGm76gP5/g-sticker-01.png" />
     </div>
   </div>
 
   <script>
     const fonts = [
-      { name: "Font 1", class: "'Lilliana', cursive" },
-      { name: "Font 2", class: "'Marker Felt'" },
-      { name: "Font 3", class: "'Barbie', cursive" },
-      { name: "Font 4", class: "'BubbleGum', cursive" },
-      { name: "Font 5", class: "'THE MINION', cursive" },
-      { name: "Font 6", class: "'Katerlin', cursive" },
-      { name: "Font 7", class: "'Buycat', cursive" },
-      { name: "Font 8", class: "'Think Big', cursive" }, 
-      { name: "Font 9", class: "'GV Time', sans-serif"},  
-      { name: "Font 10", class: "'Kefa Regular', cursive" },
-      { name: "Font 11", class: "'Super Bakery', serif" }, 
-      { name: "Font 12", class: "'Source Serif Pro', sans-serif" },
+      { name: "خط ۱", class: "Tahoma, sans-serif", arabic: true },
+      { name: "خط ۲", class: "'DecoType Naskh', serif", arabic: true },
+       { name: "خط ۳", class: "'FF Malmoom Regular', serif", arabic: true },
+      { name: "خط ٤", class: "'DG Mataryah', serif", arabic: true },
+      { name: "خط ٥", class: "'FF Mshabbak Regular', serif", arabic: true },
+      { name: "خط ٦", class: "'Noto Nastaliq Urdu', serif", arabic: true },
+      { name: "خط ٧", class: "'VIP Sbgh', serif", arabic: true },
+      {  name: "خط ۸", class: "'Air Strip Arabic', sans-serif", arabic: true },
+      { name: "خط ۹", class: "'Watad Regular', sans-serif", arabic: true },
+      { name: "خط خط ۱۰", class: "'Hacen Tunisia', sans-serif", arabic: true },
+      { name: "خط ۱۱", class: "'Harmattan', sans-serif", arabic: true },
+      {name: "خط ۱۲", class: "'Diodrum Arabic Bold', sans-serif", arabic: true },
+    
       { name: "Font 13", class: "'JosephSophia', cursive" },
       { name: "Font 14", class: "'Wicked Mouse', cursive" },
       { name: "Font 15", class: "'Myriad Pro', sans-serif" },
@@ -247,8 +294,7 @@
 
 
     ];
-
-    const input = document.getElementById('textInput');
+const input = document.getElementById('textInput');
     const container = document.getElementById('fontContainer');
 
     function createFontCards() {
@@ -263,6 +309,11 @@
         const preview = document.createElement('div');
         preview.className = 'font-preview';
         preview.style.fontFamily = font.class;
+        
+        // Add Arabic class if it's an Arabic font
+        if (font.arabic) {
+          preview.classList.add('arabic-font');
+        }
 
         card.appendChild(name);
         card.appendChild(preview);
@@ -271,9 +322,16 @@
     }
 
     function updatePreviews() {
-      const text = input.value || "Graphique Font Preview";
-      document.querySelectorAll('.font-preview').forEach(preview => {
-        preview.textContent = text;
+      const arabicText = "قرافيكي";
+      const englishText = "Graphique Font Preview";
+      const text = input.value || null;
+
+      document.querySelectorAll('.font-preview').forEach((preview, index) => {
+        if (text) {
+          preview.textContent = text;
+        } else {
+          preview.textContent = fonts[index].arabic ? arabicText : englishText;
+        }
       });
     }
 
@@ -281,6 +339,10 @@
 
     createFontCards();
     updatePreviews();
+
+
+
+
   </script>
 </body>
 </html>
