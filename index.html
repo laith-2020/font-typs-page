@@ -1,348 +1,513 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Multi-Font Text Display</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-Font Text Display</title>
 
-  <!-- Existing Fonts -->
-  <link href="https://fonts.cdnfonts.com/css/lilliana" rel="stylesheet">
-  <link href="https://fonts.cdnfonts.com/css/barbie" rel="stylesheet">
-  <link href="https://fonts.cdnfonts.com/css/bubblegum" rel="stylesheet">
-  <link href="https://fonts.cdnfonts.com/css/the-minion" rel="stylesheet">
-  <link href="https://fonts.cdnfonts.com/css/myriad-pro" rel="stylesheet">
-  <!-- New Fonts -->
-  <link href="https://fonts.cdnfonts.com/css/katerlin" rel="stylesheet">
-  <link href="https://fonts.cdnfonts.com/css/buycat" rel="stylesheet">
-  <link href="https://fonts.cdnfonts.com/css/think-big" rel="stylesheet">
-  <link href="https://fonts.cdnfonts.com/css/super-bakery" rel="stylesheet">
-  <link href="https://fonts.cdnfonts.com/css/source-serif-pro" rel="stylesheet">
-  <link href="https://fonts.cdnfonts.com/css/josephsophia" rel="stylesheet">
-  <link href="https://fonts.cdnfonts.com/css/wicked-mouse" rel="stylesheet">
-  <link href="https://fonts.cdnfonts.com/css/cheri" rel="stylesheet">
-  <link href="https://fonts.cdnfonts.com/css/chicken-pie-height" rel="stylesheet">
-  <link href="https://fonts.cdnfonts.com/css/arial-mt" rel="stylesheet">
-  <link href="https://fonts.cdnfonts.com/css/coffee-healing" rel="stylesheet">
-  <link href="https://fonts.cdnfonts.com/css/kandira-personal" rel="stylesheet">
-  <link href="https://fonts.cdnfonts.com/css/waltograph" rel="stylesheet">
-  <link href="https://fonts.cdnfonts.com/css/glacial-indifference" rel="stylesheet">
-  <link href="https://fonts.cdnfonts.com/css/snowhut" rel="stylesheet">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Arabic Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Harmattan&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Existing Fonts -->
+    <link href="https://fonts.cdnfonts.com/css/lilliana" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/barbie" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/bubblegum" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/the-minion" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/myriad-pro" rel="stylesheet" />
+    <!-- New Fonts -->
+    <link href="https://fonts.cdnfonts.com/css/katerlin" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/buycat" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/think-big" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/super-bakery" rel="stylesheet" />
+    <link
+      href="https://fonts.cdnfonts.com/css/source-serif-pro"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.cdnfonts.com/css/josephsophia" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/wicked-mouse" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/cheri" rel="stylesheet" />
+    <link
+      href="https://fonts.cdnfonts.com/css/chicken-pie-height"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.cdnfonts.com/css/arial-mt" rel="stylesheet" />
+    <link
+      href="https://fonts.cdnfonts.com/css/coffee-healing"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.cdnfonts.com/css/kandira-personal"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.cdnfonts.com/css/waltograph" rel="stylesheet" />
+    <link
+      href="https://fonts.cdnfonts.com/css/glacial-indifference"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.cdnfonts.com/css/snowhut" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Dancing+Script:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Arabic Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Harmattan&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <!-- <link href="https://fonts.cdnfonts.com/css/towel" rel="stylesheet"> -->
 
-  <style>
-@import url('https://fonts.cdnfonts.com/css/myriad-pro');
-@import url('https://fonts.cdnfonts.com/css/kandira-personal');
+    <style>
+      @import url("https://fonts.cdnfonts.com/css/myriad-pro");
+      @import url("https://fonts.cdnfonts.com/css/kandira-personal");
+      /* @import url('https://fonts.cdnfonts.com/css/towel'); */
 
-    body {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      /* font-family: "Myriad Pro", Myriad, sans-serif; */
-    }
-    .logo {
-      max-width: 200px;
-      margin-bottom: 30px;
-    }
-    .text-display {
-      min-height: 50px;
-      padding: 15px;
-    }
-    .Lilliana {
-      font-family: 'Lilliana';
-      font-size: 24px;
-    }
-    h2 {
-      margin-top: 30px;
-      color: #444;
-    }
-    .header-text {
-      text-align: center;
-      color: black;
-    }
-    .head-div {
-      background-color: #fef8f2;
-      text-align: center;
-      padding-bottom: 10px;
-    }
-    .preview-text {
-      font-family: "Myriad Pro", Myriad, sans-serif;
-      margin: 0px 0px 30px 0px;
-      color: #606161;
-      letter-spacing: 3px;
-      font-size: 17pt;
-    }
-    .inline-heart {
-      color: #fa95f9;
-      margin: 0 5px;
-      animation: heartbeat 1.5s infinite;
-      display: inline-block;
-    }
-    @keyframes heartbeat {
-      0% { transform: scale(1); }
-      25% { transform: scale(1.1); }
-      50% { transform: scale(1); }
-      75% { transform: scale(1.1); }
-      100% { transform: scale(1); }
-    }
-    .input-container {
-      position: relative;
-      display: inline-block;
-      width: 500px;
-    }
-    #textInput {
-      width: 100%;
-      padding: 3px 0px 3px 8px;
-      border: 0.1px #eceaea solid;
-    }
-    .heart-icon {
-      position: absolute;
-      right: 10px;
-      top: 67%;
-      transform: translateY(-50%);
-      color: #e0a3ba;
-      animation: heartbeat 1.5s infinite;
-      cursor: pointer;
-    }
-    .body-div {
-      padding-top: 60px;
-      padding-left: 150px;
-    }
-    .marker-filt {
-      font-family: "Marker Felt", fantasy;
-    }
-    .barbie {
-      font-family: 'Barbie', cursive;
-    }
-    .BubbleGum {
-      font-family: 'BubbleGum', cursive;
-    }
+      body {
+        max-width: 53%;
+        margin: 0 auto;
+        padding: 11px;
+        /* font-family: "Myriad Pro", Myriad, sans-serif; */
+      }
+      .logo {
+        max-width: 200px;
+        margin-bottom: 30px;
+      }
+      .text-display {
+        min-height: 50px;
+        padding: 15px;
+      }
+      .Lilliana {
+        font-family: "Lilliana";
+        font-size: 24px;
+      }
+      h2 {
+        margin-top: 30px;
+        color: #444;
+      }
+      .header-text {
+        text-align: center;
+        color: black;
+      }
+  .head-div {
+            background-color: #fef8f2;
+            text-align: center;
+            padding: 4px 15px;
+            box-sizing: border-box;
+        }
+        .logo-img {
+          width: 80px;
+        height: 78px;
+        margin: auto auto;
+        display: block;
+        }
+        .img1 {
+            max-width: 70px;
+            height: auto;
+            margin: 0 auto 4px;
+            display: block;
+        }
+        
+        .preview-text {
+            /* font-family: "Myriad Pro", Myriad, sans-serif; */
+            margin: 0 0 20px 0;
+            color: #606161;
+            letter-spacing: 3px;
+            font-size: 0.7rem; /* Responsive font size */
+        }
+        
+        .input-container {
+            position: relative;
+            display: block;
+            width: 78%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        #textInput {
+            width: 100%;
+            padding: 10px 35px 10px 15px;
+            border: 1px solid #eceaea;
+            border-radius: 4px;
+            box-sizing: border-box;
+            /* font-family: "Myriad Pro", sans-serif; */
+                font-size: 0.5rem;
+        }
+        
+        .try-text {
+            color: #e0a3ba;
+            letter-spacing: 3px;
+            margin-bottom: 8px;
+            font-size: 0.8rem;
+            text-align: start;
+            /* font-family: "Myriad Pro", sans-serif; */
+        }
+        
+        .heart-icon {
+            position: absolute;
+            right: 8px;
+            top: 68%;
+            transform: translateY(-50%);
+            color: #e0a3ba;
+            animation: heartbeat 1.5s infinite;
+            cursor: pointer;
+            font-size: 10px;
+        }
+        
+        @keyframes heartbeat {
+            0% { transform: translateY(-50%) scale(1); }
+            25% { transform: translateY(-50%) scale(1.1); }
+            50% { transform: translateY(-50%) scale(1); }
+            75% { transform: translateY(-50%) scale(1.1); }
+            100% { transform: translateY(-50%) scale(1); }
+        }
+        
+        /* Media queries for mobile responsiveness */
+        @media (max-width: 600px) {
+            .head-div {
+                padding: 15px 10px;
+            }
+            
+            .img {
+                max-width: 180px;
+                margin-bottom: 15px;
+            }
+            
+            .preview-text {
+                margin-bottom: 15px;
+                letter-spacing: 2px;
+            }
+            
+            #textInput {
+                font-size: 6px;
+            }
+            
+            .heart-icon {
+                right: 12px;
+                top: 65%;
 
-    .font-card {
-   padding-bottom: 20px;
-    }
-    .font-name {
-      /* font-weight: bold; */
-      margin-bottom: 10px;
-      color: #606161;
-      /* border-bottom: 1px solid #eee; */
-      padding-bottom: 5px;
-    }
-    .font-preview {
-       border-bottom: 1px solid #eee;
-      min-height: 60px;
-      font-size: 30px;
-      line-height: 1.4;
-    }
-    .try-text {
-      color: #e0a3ba;
-      letter-spacing: 3px;
-      margin-bottom: 5px;
-      font-size: 15px;
-      text-align: start;
-      font-family: 'Myriad Pro ';
-    }
-    .img {
-      text-align: center !important;
-      /* width: 200px; */
-      /* height: 100px; */
-      margin: auto;
-      display: block;
-    }
-    @font-face {
-    font-family: 'The Postgates Regular';
-    src: url('fonts/thepostgates.ttf.woff2') format('woff2'),
-         url('fonts/thepostgates.ttf.woff') format('woff'),
-         url('fonts/thepostgates.ttf.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    }
-    @font-face {
-    font-family: 'GV Time';
-    src: url('fonts/GvTimeRegular-4B1zD.woff2') format('woff2'),
-         url('fonts/GvTimeRegular-4B1zD.woff') format('woff'),
-         url('fonts/GvTimeRegular-4B1zD.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    }
+                font-size: 14px;
+            }
+        
+         .font-preview {
+            font-size: 20px !important;
+          }
+          }
+        
+        @media (max-width: 400px) {
+            .preview-text {
+                font-size: 16px;
+                letter-spacing: 1px;
+            }
+            
+            .try-text {
+                font-size: 12px;
+                letter-spacing: 1px;
+            }
+        }
 
-    @font-face {
-    font-family: 'Kefa Regular';
-    src: url('fonts/kefa-regular.woff2') format('woff2'),
-         url('fonts/kefa-regular.woff') format('woff'),
-         url('fonts/kefa-regular.ttf') format('truetype');
-    }
-    @font-face {
-    font-family: 'Love';
-    src: url('fonts/Love.woff2') format('woff2'),
-         url('fonts/Love.woff') format('woff'),
-         url('fonts/Love.ttf') format('truetype');
-    }
-    @font-face {
-    font-family: 'Myriad Pro';
-    src: url('fonts/font15.woff2') format('woff2'),
-         url('fonts/font15.woff') format('woff'),
-         url('fonts/font15.otf') format('truetype');
-    }
+      .inline-heart {
+        color: #fa95f9;
+        margin: 0 5px;
+        animation: heartbeat 1.5s infinite;
+        display: inline-block;
+      }
+      @keyframes heartbeat {
+        0% {
+          transform: scale(1);
+        }
+        25% {
+          transform: scale(1.1);
+        }
+        50% {
+          transform: scale(1);
+        }
+        75% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
 
-
-    /* Arabic Font Faces */
-
-    @font-face {
-      font-family: 'DecoType Naskh';
-      src: url('fonts/DecoTypeNaskhregular.woff2') format('woff2'),
-          url('fonts/DecoTypeNaskhregular.woff') format('woff'),
-          url('fonts/DecoTypeNaskhregular.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-      font-display: swap; /* Optional: improves performance */
-    }
-    @font-face {
-      font-family: 'FF Malmoom Regular';
-      src: url('fonts/FFMalmoomRegular.ttf') format('truetype');
-    }
-    @font-face {
-      font-family: 'DG Mataryah';
-      src: url('fonts/DGMataryah.ttf') format('truetype');
-    }
-    @font-face {
-      font-family: 'FF Mshabbak Regular';
-      src: url('fonts/FFMshabbakRegular.ttf') format('truetype');
-    }
-    @font-face {
-      font-family: 'VIP Sbgh';
-      src: url('fonts/VIPSbgh.ttf') format('truetype');
-    }
-    @font-face {
-      font-family: 'Air Strip Arabic';
-      src: url('fonts/AirStripArabic.ttf') format('truetype');
-    }
-    @font-face {
-      font-family: 'Watad Regular';
-      src: url('fonts/WatadRegular.otf') format('truetype');
-    }
-    @font-face {
-      font-family: 'Hacen Tunisia';
-      src: url('fonts/HacenTunisia.ttf') format('truetype');
-    }
-    @font-face {
-      font-family: 'Harmattan';
-      src: url('fonts/Harmattan.ttf') format('truetype');
-    }
-    @font-face {
-      font-family: 'Diodrum Arabic Bold';
-      src: url('fonts/DiodrumArabicBold.ttf') format('truetype');
-    }
+      #textInput {
+        width: 100%;
+        padding: 3px 0px 3px 8px;
+        border: 0.1px #eceaea solid;
+      }
     
+      .body-div {
+        padding-top: 60px;
+        /* padding-left: 150px; */
+      }
+      .marker-filt {
+        font-family: "Marker Felt", fantasy;
+      }
+      .barbie {
+        font-family: "Barbie", cursive;
+      }
+      .BubbleGum {
+        font-family: "BubbleGum", cursive;
+      }
+
+      .font-card {
+        padding-bottom: 20px;
+      }
+      .font-name {
+        /* font-weight: bold; */
+        margin-bottom: 10px;
+        color: #b88d6b;
+            font-size: 0.7rem;
+        padding-bottom: 5px;
+      }
+      .font-preview {
+        border-bottom: 1px solid #eee;
+            min-height: 30px;
+    font-size: 1rem;
+        line-height: 1.4;
+        color: #606060
+      }
+
+      @font-face {
+        font-family: "The Postgates Regular";
+        src: 
+          url("fonts/thepostgates.ttf.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "GV.Time";
+        src: url("fonts/GvTimeRegular.ttf") format("truetype");
+
+      }
+
+      @font-face {
+        font-family: "Kefa Regular";
+        src: url("fonts/KefaRegular.ttf") format("truetype");
+      }
+      @font-face {
+        font-family: "Love";
+        src: url("fonts/Love.ttf") format("truetype");
+      }
+      @font-face {
+        font-family: "Myriad Pro";
+        src: 
+          url("fonts/font15.otf") format("truetype");
+      }
+
+      /* Arabic Font Faces */
+
+      @font-face {
+        font-family: "DecoType Naskh";
+        src:url("fonts/DecoTypeNaskhregular.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap; /* Optional: improves performance */
+      }
+      @font-face {
+        font-family: "FF Malmoom Regular";
+        src: url("fonts/FFMalmoomRegular.ttf") format("truetype");
+      }
+      @font-face {
+        font-family: "DG Mataryah";
+        src: url("fonts/DGMataryah.ttf") format("truetype");
+      }
+      @font-face {
+        font-family: "FF Mshabbak Regular";
+        src: url("fonts/FFMshabbakRegular.otf") format("truetype");
+      }
+      @font-face {
+        font-family: "VIP Sbgh";
+        src: url("fonts/VIPSbgh.ttf") format("truetype");
+      }
+      @font-face {
+        font-family: "Air Strip Arabic";
+        src: url("fonts/AirStripArabic.ttf") format("truetype");
+      }
+      @font-face {
+        font-family: "Watad Regular";
+        src: url("fonts/WatadRegular.otf") format("truetype");
+      }
+      @font-face {
+        font-family: "Hacen Tunisia";
+        src: url("fonts/HacenTunisia.ttf") format("truetype");
+      }
+       @font-face {
+      font-family: 'FF Taweel';
+        src: url("fonts/FFTaweelRegular.ttf") format("truetype");
+      } 
+
+      @font-face {
+        font-family: "Diodrum Arabic Bold";
+        src: url("fonts/DiodrumArabicBold.ttf") format("truetype");
+      }
+      @font-face {
+        font-family: "Tahoma";
+        src: url("fonts/Tahoma.ttf") format("truetype");
+      }
+       @font-face {
+        font-family: 'Buycat', sans-serif;
+        src: url("fonts/Baycat.otf") format("truetype");
+      }
+       @font-face {
+        font-family: "Marker Felt";
+        src: url("fonts/MarkerFelt.ttf") format("truetype");
+      }
   </style>
-</head>
-<body>
-  <div class="head-div">
-    <img class="img" src="https://i.postimg.cc/xCRnwGGF/g-sticker-03.png" height="100" width="100" />
-    <div class="input-area">
-      <h2 class="preview-text">Preview Your Font</h2>
+  </head>
+  <body>
+   <div class="head-div">
+        <img 
+            class="img1"
+            src="https://i.postimg.cc/xCRnwGGF/g-sticker-03.png"
+            alt="Logo"
+        />
+        <div class="input-area">
+            <h2 class="preview-text">Preview Your Font</h2>
+        </div>
+        <div>
+            <div class="input-container">
+                <p class="try-text">Try out font</p>
+                <input
+                    type="text"
+                    id="textInput"
+                    placeholder="enter your text here and see how they will look before purchasing"
+                />
+                <i class="fas fa-heart heart-icon"></i>
+            </div>
+        </div>
     </div>
-    <div>
-      <div class="input-container">
-        <p class="try-text">Try out font</p>
-        <input type="text" id="textInput" placeholder="enter your text here and see how they will look before purchasing">
-        <i class="fas fa-heart heart-icon"></i>
+    <div class="body-div">
+      <div class="font-grid" id="fontContainer">
+        <!-- Font cards will be generated here -->
+      </div>
+      <div>
+        <img
+  
+          class="logo-img"
+          src="./img/logo2.png"
+        />
       </div>
     </div>
-  </div>
-  <div class="body-div">
-    <div class="font-grid" id="fontContainer">
-      <!-- Font cards will be generated here -->
-    </div>
-    <div>
-      <img    style="width: 38rem;" class="img" src="https://i.postimg.cc/MGm76gP5/g-sticker-01.png" />
-    </div>
-  </div>
 
-  <script>
-    const fonts = [
-      { name: "خط ۱", class: "Tahoma, sans-serif", arabic: true },
-      { name: "خط ۲", class: "'DecoType Naskh', serif", arabic: true },
-       { name: "خط ۳", class: "'FF Malmoom Regular', serif", arabic: true },
-      { name: "خط ٤", class: "'DG Mataryah', serif", arabic: true },
-      { name: "خط ٥", class: "'FF Mshabbak Regular', serif", arabic: true },
-      { name: "خط ٦", class: "'Noto Nastaliq Urdu', serif", arabic: true },
-      { name: "خط ٧", class: "'VIP Sbgh', serif", arabic: true },
-      {  name: "خط ۸", class: "'Air Strip Arabic', sans-serif", arabic: true },
-      { name: "خط ۹", class: "'Watad Regular', sans-serif", arabic: true },
-      { name: "خط خط ۱۰", class: "'Hacen Tunisia', sans-serif", arabic: true },
-      { name: "خط ۱۱", class: "'Harmattan', sans-serif", arabic: true },
-      {name: "خط ۱۲", class: "'Diodrum Arabic Bold', sans-serif", arabic: true },
-    
-      { name: "Font 13", class: "'JosephSophia', cursive" },
-      { name: "Font 14", class: "'Wicked Mouse', cursive" },
-      { name: "Font 15", class: "'Myriad Pro', sans-serif" },
-      { name: "Font 16", class: "'The Postgates Regular', serif" },
-      { name: "Font 17", class: "'Cheri', cursive" },
-      { name: "Font 18", class: "'CHICKEN Pie Height', cursive" },
-      { name: "Font 19", class: "'Arial Rounded MT Bold', sans-serif" },
-      { name: "Font 20", class: "'LOVE', sans-serif" },
-      { name: "Font 21", class: "'Kandira PERSONAL', cursive" },
-      { name: "Font 22", class: "'Waltograph', cursive" },
-      { name: "Font 23", class: "'Glacial Indifference', cursive" },
-      { name: "Font 24", class: "'SnowHut', cursive" }
-
-
-    ];
-const input = document.getElementById('textInput');
-    const container = document.getElementById('fontContainer');
-
-    function createFontCards() {
-      fonts.forEach(font => {
-        const card = document.createElement('div');
-        card.className = 'font-card';
-
-        const name = document.createElement('div');
-        name.className = 'font-name';
-        name.textContent = font.name;
-
-        const preview = document.createElement('div');
-        preview.className = 'font-preview';
-        preview.style.fontFamily = font.class;
-        
-        // Add Arabic class if it's an Arabic font
-        if (font.arabic) {
-          preview.classList.add('arabic-font');
-        }
-
-        card.appendChild(name);
-        card.appendChild(preview);
-        container.appendChild(card);
-      });
-    }
-
-    function updatePreviews() {
-      const arabicText = "قرافيكي";
-      const englishText = "Graphique Font Preview";
-      const text = input.value || null;
-
-      document.querySelectorAll('.font-preview').forEach((preview, index) => {
-        if (text) {
-          preview.textContent = text;
-        } else {
-          preview.textContent = fonts[index].arabic ? arabicText : englishText;
-        }
-      });
-    }
-
-    input.addEventListener('input', updatePreviews);
-
-    createFontCards();
-    updatePreviews();
+    <script>
+      const fonts = [
+                { name: "Font 1", class: "'Lilliana', cursive" },
+        { name: "Font 2", class: "'Marker Felt'" },
+        { name: "Font 3", class: "'barbie', cursive" },
+        { name: "Font 4", class: "'BubbleGum', cursive" },
+        { name: "Font 5", class: "'THE MINION', sans-serif" },
+        { name: "Font 6", class: "'Katerlin', sans-serif" },
+        { name: "Font 7", class: "'Buycat', sans-serif" },
+        { name: "Font 8", class: "'Think Big', sans-serif" },
+        { name: "Font 9", class: "'GV.Time', sans-serif" },
+        { name: "Font 10", class: "'Kefa Regular', sans-serif" },
+        { name: "Font 11", class: "'Super Bakery', cursive" },
+        { name: "Font 12", class: "'Source Serif Variable', serif" },
+        { name: "Font 13", class: "'JosephSophia', cursive" },
+        { name: "Font 14", class: "'Wicked Mouse', cursive" },
+        { name: "Font 15", class: "'Myriad Pro', sans-serif" },
+        { name: "Font 16", class: "'The Postgates Regular', serif" },
+        { name: "Font 17", class: "'Cheri', cursive" },
+        { name: "Font 18", class: "'CHICKEN Pie Height', cursive" },
+        { name: "Font 19", class: "'Arial Rounded MT Bold', sans-serif" },
+        { name: "Font 20", class: "'LOVE', sans-serif" },
+        { name: "Font 21", class: "'Kandira PERSONAL', cursive" },
+        { name: "Font 22", class: "'Waltograph', cursive" },
+        { name: "Font 23", class: "'Glacial Indifference', cursive" },
+        { name: "Font 24", class: "'SnowHut', cursive" },
+        { name: "خط ۱", class: "Tahoma, sans-serif", arabic: true },
+        { name: "خط ۲", class: "'DecoType Naskh', serif", arabic: true },
+        { name: "خط ۳", class: "'FF Malmoom Regular', serif", arabic: true },
+        { name: "خط ٤", class: "'DG Mataryah', serif", arabic: true },
+        { name: "خط ٥", class: "'FF Mshabbak Regular', serif", arabic: true },
+        { name: "خط ٦", class: "'Noto Nastaliq Urdu', serif", arabic: true },
+        { name: "خط ٧", class: "'VIP Sbgh', serif", arabic: true },
+        { name: "خط ۸", class: "'Air Strip Arabic', sans-serif", arabic: true },
+        { name: "خط ۹", class: "'Watad Regular', sans-serif", arabic: true },
+        { name: " خط ۱۰", class: "'Hacen Tunisia', sans-serif", arabic: true },
+        { name: "خط ۱۱", class: "'FF Taweel'", arabic: true },
+        {
+          name: "خط ۱۲",
+          class: "'Diodrum Arabic Bold', sans-serif",
+          arabic: true,
+        },
 
 
+      ];
+      const input = document.getElementById("textInput");
+      const container = document.getElementById("fontContainer");
+
+      function createFontCards() {
+        fonts.forEach((font) => {
+          const card = document.createElement("div");
+          card.className = "font-card";
+
+          const name = document.createElement("div");
+          name.className = "font-name";
+          name.textContent = font.name;
+
+          const preview = document.createElement("div");
+          preview.className = "font-preview";
+          preview.style.fontFamily = font.class;
+
+          if (font.class == "'barbie', cursive") {
+            preview.style.fontSize = "1.5rem";
+          }
+           if (font.class == "'Katerlin', sans-serif") {
+            preview.style.fontSize = "1.5rem";
+          }
+         if (font.class == "'JosephSophia', cursive") {
+            preview.style.fontSize = "1.5rem";
+          }
 
 
-  </script>
-</body>
+         if (font.class == "'Wicked Mouse', cursive") {
+            preview.style.fontSize = "0.8rem";
+          }
+
+          if (font.class == "'Waltograph', cursive") {
+            preview.style.fontSize = "1.5rem";
+          }
+ if (font.class == "SnowHut', cursive") {
+            preview.style.fontSize = "1.5rem";
+          }
+          // Add Arabic class if it's an Arabic font
+          if (font.arabic) {
+            preview.classList.add("arabic-font");
+          }
+
+          card.appendChild(name);
+          card.appendChild(preview);
+          container.appendChild(card);
+        });
+      }
+
+      function updatePreviews() {
+        const arabicText = "قرافيكي";
+        const englishText = "Graphique";
+        const text = input.value || null;
+
+        document.querySelectorAll(".font-preview").forEach((preview, index) => {
+          if (text) {
+            preview.textContent = text;
+          } else {
+            preview.textContent = fonts[index].arabic
+              ? arabicText
+              : englishText;
+          }
+        });
+      }
+
+      input.addEventListener("input", updatePreviews);
+
+      createFontCards();
+      updatePreviews();
+    </script>
+  </body>
 </html>
