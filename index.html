@@ -374,7 +374,7 @@
         </div>
         <div>
             <div class="input-container">
-                <p class="try-text">Try out font</p>
+                <p class="try-text">Try out the font</p>
                 <input
                     type="text"
                     id="textInput"
@@ -457,25 +457,28 @@
           preview.style.fontFamily = font.class;
 
           if (font.class == "'barbie', cursive") {
-            preview.style.fontSize = "1.5rem";
+            preview.style.fontSize = "2rem";
           }
            if (font.class == "'Katerlin', sans-serif") {
-            preview.style.fontSize = "1.5rem";
+            preview.style.fontSize = "2rem";
           }
          if (font.class == "'JosephSophia', cursive") {
             preview.style.fontSize = "1.5rem";
           }
-
-
          if (font.class == "'Wicked Mouse', cursive") {
             preview.style.fontSize = "0.8rem";
           }
-
           if (font.class == "'Waltograph', cursive") {
             preview.style.fontSize = "1.5rem";
           }
- if (font.class == "SnowHut', cursive") {
+          if (font.class == "'SnowHut', cursive") {
             preview.style.fontSize = "1.5rem";
+          }
+          if (font.class == "'Think Big', sans-serif") {
+            preview.style.fontSize = "2rem";
+          }
+          if (font.class == "'GV.Time', sans-serif") {
+            preview.style.fontSize = "2rem";
           }
           // Add Arabic class if it's an Arabic font
           if (font.arabic) {
@@ -490,7 +493,7 @@
 
       function updatePreviews() {
         const arabicText = "قرافيكي";
-        const englishText = "Graphique";
+        const englishText = "Graphique Font Preview";
         const text = input.value || null;
 
         document.querySelectorAll(".font-preview").forEach((preview, index) => {
