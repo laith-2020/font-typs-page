@@ -209,6 +209,7 @@
       }
    .arabic-font {
           font-size: 2.5rem !important;
+          min-height: 103px !important;
         }
       @media (max-width: 400px) {
         .preview-text {
@@ -276,7 +277,7 @@
         /* font-weight: bold; */
         margin-bottom: 10px;
         color: #b88d6b;
-        font-size: 0.9rem;
+        font-size: 1.7rem;
         padding-bottom: 5px;
       }
       .font-preview {
@@ -483,9 +484,31 @@
           if (font.class == "'GV.Time', sans-serif") {
             preview.style.fontSize = "2rem";
           }
+          
           // Add Arabic class if it's an Arabic font
           if (font.arabic) {
             preview.classList.add("arabic-font");
+            if (font.class == "'FF Malmoom Regular', serif") {
+              preview.style.fontSize = "4rem";
+              preview.style.setProperty('font-size', '4rem', 'important'); 
+            }
+            
+            if (font.class == "'DG Mataryah', serif") {
+              preview.style.fontSize = "4rem";
+              preview.style.setProperty('font-size', '4rem', 'important'); 
+            }
+            if (font.class == "'FF Mshabbak Regular', serif") {
+              preview.style.fontSize = "3rem";
+              preview.style.setProperty('font-size', '3rem', 'important'); 
+            }
+            if (font.class == "'DecoType Naskh', serif") {
+              preview.style.fontSize = "4rem";
+              preview.style.setProperty('font-size', '4rem', 'important'); 
+            }
+            if (font.class == "'Noto Nastaliq Urdu', serif") {
+              preview.style.fontSize = "3.5rem";
+              preview.style.setProperty('font-size', '3.5rem', 'important'); 
+            }
           }
 
           card.appendChild(name);
