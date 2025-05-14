@@ -94,124 +94,136 @@
         text-align: center;
         color: black;
       }
-  .head-div {
-            background-color: #fef8f2;
-            text-align: center;
-            padding: 4px 15px;
-            box-sizing: border-box;
-        }
-        .logo-img {
-          width: 80px;
+      .head-div {
+        background-color: #fef8f2;
+        text-align: center;
+        padding: 4px 15px;
+        box-sizing: border-box;
+      }
+      .logo-img {
+        width: 80px;
         height: 78px;
         margin: auto auto;
         display: block;
+      }
+      .img1 {
+        max-width: 70px;
+        height: auto;
+        margin: 0 auto 4px;
+        display: block;
+      }
+
+      .preview-text {
+        /* font-family: "Myriad Pro", Myriad, sans-serif; */
+        margin: 0 0 20px 0;
+        color: #606161;
+        letter-spacing: 3px;
+        font-size: 0.9rem; /* Responsive font size */
+      }
+
+      .input-container {
+        position: relative;
+        display: block;
+        width: 78%;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      #textInput {
+        width: 100%;
+        padding: 10px 35px 10px 15px;
+        border: 1px solid #eceaea;
+        border-radius: 4px;
+        box-sizing: border-box;
+        /* font-family: "Myriad Pro", sans-serif; */
+        font-size: 0.9rem;
+      }
+
+      .try-text {
+        color: #e0a3ba;
+        letter-spacing: 3px;
+        margin-bottom: 3px;
+        font-size: 1rem;
+        text-align: start;
+        /* font-family: "Myriad Pro", sans-serif; */
+      }
+
+      .heart-icon {
+        position: absolute;
+        right: 8px;
+        top: 68%;
+        transform: translateY(-50%);
+        color: #e0a3ba;
+        animation: heartbeat 1.5s infinite;
+        cursor: pointer;
+        font-size: 10px;
+      }
+
+      @keyframes heartbeat {
+        0% {
+          transform: translateY(-50%) scale(1);
         }
-        .img1 {
-            max-width: 70px;
-            height: auto;
-            margin: 0 auto 4px;
-            display: block;
+        25% {
+          transform: translateY(-50%) scale(1.1);
         }
-        
+        50% {
+          transform: translateY(-50%) scale(1);
+        }
+        75% {
+          transform: translateY(-50%) scale(1.1);
+        }
+        100% {
+          transform: translateY(-50%) scale(1);
+        }
+      }
+
+      /* Media queries for mobile responsiveness */
+      @media (max-width: 600px) {
+        .head-div {
+          padding: 15px 10px;
+        }
+
+        .img {
+          max-width: 180px;
+          margin-bottom: 15px;
+        }
+
         .preview-text {
-            /* font-family: "Myriad Pro", Myriad, sans-serif; */
-            margin: 0 0 20px 0;
-            color: #606161;
-            letter-spacing: 3px;
-            font-size: 0.9rem; /* Responsive font size */
+          margin-bottom: 15px;
+          letter-spacing: 2px;
         }
-        
-        .input-container {
-            position: relative;
-            display: block;
-            width: 78%;
-            max-width: 500px;
-            margin: 0 auto;
-        }
-        
+
         #textInput {
-            width: 100%;
-            padding: 10px 35px 10px 15px;
-            border: 1px solid #eceaea;
-            border-radius: 4px;
-            box-sizing: border-box;
-            /* font-family: "Myriad Pro", sans-serif; */
-                font-size: 0.9rem;
+          font-size: 6px;
         }
-        
-        .try-text {
-            color: #e0a3ba;
-            letter-spacing: 3px;
-            margin-bottom: 3px;
-            font-size: 1rem;
-            text-align: start;
-            /* font-family: "Myriad Pro", sans-serif; */
-        }
-        
+
         .heart-icon {
-            position: absolute;
-            right: 8px;
-            top: 68%;
-            transform: translateY(-50%);
-            color: #e0a3ba;
-            animation: heartbeat 1.5s infinite;
-            cursor: pointer;
-            font-size: 10px;
+          right: 12px;
+          top: 70%;
+          font-size: 8px;
         }
-        
-        @keyframes heartbeat {
-            0% { transform: translateY(-50%) scale(1); }
-            25% { transform: translateY(-50%) scale(1.1); }
-            50% { transform: translateY(-50%) scale(1); }
-            75% { transform: translateY(-50%) scale(1.1); }
-            100% { transform: translateY(-50%) scale(1); }
+     
+        .font-preview {
+          /* font-size: 20px !important; */
         }
-        
-        /* Media queries for mobile responsiveness */
-        @media (max-width: 600px) {
-            .head-div {
-                padding: 15px 10px;
-            }
-            
-            .img {
-                max-width: 180px;
-                margin-bottom: 15px;
-            }
-            
-            .preview-text {
-                margin-bottom: 15px;
-                letter-spacing: 2px;
-            }
-            
-            #textInput {
-                font-size: 6px;
-            }
-            
-            .heart-icon {
-                right: 12px;
-                top: 70%;
-                font-size: 8px;
-            }
-        
-         .font-preview {
-            /* font-size: 20px !important; */
-          }
-          }
-        
-        @media (max-width: 400px) {
-            .preview-text {
-                font-size: 16px;
-                letter-spacing: 1px;
-            }
-            
-            .try-text {
-                font-size: 8px;
-                margin-bottom: 0px;
-                padding-left: 2px;
-                padding-top: 2px;
-                letter-spacing: 1px;
-            }
+      }
+   .arabic-font {
+          font-size: 2.5rem !important;
         }
+      @media (max-width: 400px) {
+        .preview-text {
+          font-size: 16px;
+          letter-spacing: 1px;
+        }
+
+        .try-text {
+          font-size: 8px;
+          margin-bottom: 0px;
+          padding-left: 2px;
+          padding-top: 2px;
+          letter-spacing: 1px;
+        }
+      }
 
       .inline-heart {
         color: #fa95f9;
@@ -242,7 +254,7 @@
         padding: 3px 0px 3px 8px;
         border: 0.1px #eceaea solid;
       }
-    
+
       .body-div {
         padding-top: 60px;
         /* padding-left: 150px; */
@@ -264,28 +276,26 @@
         /* font-weight: bold; */
         margin-bottom: 10px;
         color: #b88d6b;
-            font-size: 0.9rem;
+        font-size: 0.9rem;
         padding-bottom: 5px;
       }
       .font-preview {
         border-bottom: 1px solid #eee;
-            min-height: 30px;
-       font-size: 1.3rem;
+        min-height: 30px;
+        font-size: 1.3rem;
         line-height: 1.4;
-        color: #606060
+        color: #606060;
       }
 
       @font-face {
         font-family: "The Postgates Regular";
-        src: 
-          url("fonts/thepostgates.ttf.ttf") format("truetype");
+        src: url("fonts/thepostgates.ttf.ttf") format("truetype");
         font-weight: normal;
         font-style: normal;
       }
       @font-face {
         font-family: "GV.Time";
         src: url("fonts/GvTimeRegular.ttf") format("truetype");
-
       }
 
       @font-face {
@@ -298,15 +308,14 @@
       }
       @font-face {
         font-family: "Myriad Pro";
-        src: 
-          url("fonts/font15.otf") format("truetype");
+        src: url("fonts/font15.otf") format("truetype");
       }
 
       /* Arabic Font Faces */
 
       @font-face {
         font-family: "DecoType Naskh";
-        src:url("fonts/DecoTypeNaskhregular.ttf") format("truetype");
+        src: url("fonts/DecoTypeNaskhregular.ttf") format("truetype");
         font-weight: normal;
         font-style: normal;
         font-display: swap; /* Optional: improves performance */
@@ -339,10 +348,10 @@
         font-family: "Hacen Tunisia";
         src: url("fonts/HacenTunisia.ttf") format("truetype");
       }
-       @font-face {
-      font-family: 'FF Taweel';
+      @font-face {
+        font-family: "FF Taweel";
         src: url("fonts/FFTaweelRegular.ttf") format("truetype");
-      } 
+      }
 
       @font-face {
         font-family: "Diodrum Arabic Bold";
@@ -352,46 +361,42 @@
         font-family: "Tahoma";
         src: url("fonts/Tahoma.ttf") format("truetype");
       }
-       @font-face {
-        font-family: 'Buycat', sans-serif;
+      @font-face {
+        font-family: "Buycat", sans-serif;
         src: url("fonts/Baycat.otf") format("truetype");
       }
-       @font-face {
+      @font-face {
         font-family: "Marker Felt";
         src: url("fonts/MarkerFelt.ttf") format("truetype");
       }
-  </style>
+    </style>
   </head>
   <body>
-   <div class="head-div">
-        <img 
-            class="img1"
-            src="https://i.postimg.cc/xCRnwGGF/g-sticker-03.png"
-            alt="Logo"
-        />
-        <div class="input-area">
-            <h2 class="preview-text">Preview Your Font</h2>
-        </div>
-        <div>
-            <div class="input-container">
-                <p class="try-text">Try out the font</p>
-                <input
-                    type="text"
-                    id="textInput"
-                    placeholder="Graphique font preview"
-                />
-                <i class="fas fa-heart heart-icon"></i>
-            </div>
-        </div>
-    </div>
-    <div class="body-div">
-      <div class="font-grid" id="fontContainer">
+    <div class="head-div">
+      <img
+        class="img1"
+        src="https://i.postimg.cc/xCRnwGGF/g-sticker-03.png"
+        alt="Logo"
+      />
+      <div class="input-area">
+        <h2 class="preview-text">Preview Your Font</h2>
       </div>
       <div>
-        <img
-          class="logo-img"
-          src="./img/logo2.png"
-        />
+        <div class="input-container">
+          <p class="try-text">Try out the font</p>
+          <input
+            type="text"
+            id="textInput"
+            placeholder="Graphique font preview"
+          />
+          <i class="fas fa-heart heart-icon"></i>
+        </div>
+      </div>
+    </div>
+    <div class="body-div">
+      <div class="font-grid" id="fontContainer"></div>
+      <div>
+        <img class="logo-img" src="./img/logo2.png" />
       </div>
     </div>
 
@@ -437,8 +442,6 @@
           class: "'Diodrum Arabic Bold', sans-serif",
           arabic: true,
         },
-
-
       ];
       const input = document.getElementById("textInput");
       const container = document.getElementById("fontContainer");
@@ -459,13 +462,13 @@
           if (font.class == "'barbie', cursive") {
             preview.style.fontSize = "2rem";
           }
-           if (font.class == "'Katerlin', sans-serif") {
+          if (font.class == "'Katerlin', sans-serif") {
             preview.style.fontSize = "2rem";
           }
-         if (font.class == "'JosephSophia', cursive") {
+          if (font.class == "'JosephSophia', cursive") {
             preview.style.fontSize = "1.5rem";
           }
-         if (font.class == "'Wicked Mouse', cursive") {
+          if (font.class == "'Wicked Mouse', cursive") {
             preview.style.fontSize = "0.8rem";
           }
           if (font.class == "'Waltograph', cursive") {
