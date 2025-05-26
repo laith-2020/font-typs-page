@@ -97,7 +97,7 @@
       .head-div {
         background-color: #fef8f2;
         text-align: center;
-        padding: 4px 15px;
+        padding: 20px 15px;
         box-sizing: border-box;
       }
       .logo-img {
@@ -136,7 +136,7 @@
         border-radius: 4px;
         box-sizing: border-box;
         /* font-family: "Myriad Pro", sans-serif; */
-        font-size: 1.0rem;
+        font-size: 1.2rem;
       }
 
       .try-text {
@@ -180,7 +180,7 @@
       /* Media queries for mobile responsiveness */
       @media (max-width: 600px) {
         .head-div {
-          padding: 15px 10px;
+          padding: 20px 10px;
         }
 
         .img {
@@ -194,7 +194,7 @@
         }
 
         #textInput {
-          font-size: 14px;
+          font-size: 16px;
         }
 
         .heart-icon {
@@ -207,7 +207,7 @@
       }
    .arabic-font {
           font-size: 2.0rem !important;
-          min-height: 103px !important;
+          /* min-height: 58px !important; */
         }
       @media (max-width: 400px) {
         .preview-text {
@@ -269,7 +269,7 @@
       }
       .font-name {
         /* font-weight: bold; */
-        margin-bottom: 10px;
+        margin-bottom: 5px;
         color: #d7a6b9;
         font-size: 1.1rem;
         padding-bottom: 5px;
@@ -482,13 +482,13 @@
           if (font.arabic) {
             preview.classList.add("arabic-font");
             if (font.class == "'FF Malmoom Regular', serif") {
-              preview.style.fontSize = "3rem";
-              preview.style.setProperty('font-size', '3rem', 'important'); 
+              preview.style.fontSize = "2rem";
+              preview.style.setProperty('font-size', '2rem', 'important'); 
             }
             
             if (font.class == "'DG Mataryah', serif") {
-              preview.style.fontSize = "3rem";
-              preview.style.setProperty('font-size', '3rem', 'important'); 
+              preview.style.fontSize = "2rem";
+              preview.style.setProperty('font-size', '2rem', 'important'); 
             }
             if (font.class == "'FF Mshabbak Regular', serif") {
               preview.style.fontSize = "2rem";
