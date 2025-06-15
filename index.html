@@ -263,7 +263,21 @@
       .BubbleGum {
         font-family: "BubbleGum", cursive;
       }
-
+ /* Close button styles */
+      .close-btn {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 24px;
+        color: #888;
+        cursor: pointer;
+        transition: color 0.3s;
+        z-index: 10;
+      }
+      
+      .close-btn:hover {
+        color: #555;
+      }
       .font-card {
         padding-bottom: 20px;
       }
@@ -365,8 +379,14 @@
         src: url("fonts/MarkerFelt.ttf") format("truetype");
       }
     </style>
+
   </head>
   <body>
+    <div class="head-div">
+  <!-- Add this close button -->
+  <span class="close-btn">&times;</span>
+  
+  <!-- Rest of your existing code -->
     <div class="head-div">
       <img
         class="img1"
@@ -439,7 +459,13 @@
       ];
       const input = document.getElementById("textInput");
       const container = document.getElementById("fontContainer");
-
+// Add this to your existing script
+document.querySelector('.close-btn').addEventListener('click', function() {
+  // You can customize what happens when clicked
+  // For example, close the window or navigate away:
+  window.close(); // This will try to close the window (may not work in all browsers)
+  // Alternatively: window.location.href = 'https://your-website.com';
+});
       function createFontCards() {
         fonts.forEach((font) => {
           const card = document.createElement("div");
